@@ -1,0 +1,72 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #f4f4f4;
+
+}
+
+.page-title {
+    color: #333;
+    font-weight: bold;
+}
+
+h1 {
+    color: navy;
+}
+
+.technology-icons img {
+    width: 50px;
+    height: 50px;
+    margin: 5px;
+}
+
+.tech-icon {
+    max-width: 40%;
+    height: auto;
+    display: block;
+    margin: auto;
+}
+
+/* Personalizar o fundo da navbar */
+.navbar {
+    background-color: #333;
+    box-shadow: 0 2px 4px rgba(0,0,0,.4);
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+/* Cor do link da navbar */
+.navbar a.nav-link {
+    color: white;
+}
+
+/* Cor do link da navbar ao passar o mouse */
+.navbar a.nav-link:hover {
+    color: #ddd;
+}
+
+.fixed-navbar {
+    padding-top: 80px;
+}
+
+.main-content {
+    padding-top: 80px;
+}
+
+.project-card {
+    transition: transform .3s ease-in-out, box-shadow .3s ease-in-out;
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0,0,0,.2);
+}
+
+.project-image {
+    height: 200px;
+    object-fit: cover;
+}
+

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Projects</title>
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body>
+<div th:replace="layouts/navbar :: navbar"></div>
+
+<div class="container mt-4">
+  <div class="main-content">
+    <h1 class="text-center mb-4">My Projects</h1>
+  <div class="row">
+    <div th:each="project : ${projects}" class="col-md-4 mb-4">
+      <div class="card project-card h-100 shadow-sm">
+        <img class="card-img-top project-image" th:src="@{'/images/' + ${project.name} + '.png'}" alt="Project Image" onerror="this.src='https://pplware.sapo.pt/wp-content/uploads/2020/12/git_capa.jpg';">
+        <div class="card-body">
+          <h4 class="card-title" th:text="${project.name}">Project Name</h4>
+          <p class="card-text" th:text="${project.description}">Project Description</p>
+          <a th:href="${project.html_url}" target="_blank" class="btn btn-primary">View on GitHub</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>
+
